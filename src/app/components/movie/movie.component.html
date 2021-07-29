@@ -1,0 +1,49 @@
+<div class="Details">
+    <div class="Backdrop" *ngIf="movie !== null" [ngStyle]="{'background-image' : 'url(https://image.tmdb.org/t/p/original'+ movie.poster_path +')'}" >
+        <div class="Gradient">
+            <h1 class="Title">
+                {{movie.title}}
+            </h1>
+        </div>
+    </div>
+    <div *ngIf="movie!==null" class="PosterAndInfo">
+        <img class="Poster" [src] = "poster" />
+        <div class="Info">
+            <p><strong>Title: </strong>{{movie.title}}</p>
+            <p><strong>Status: </strong>{{movie.status}}</p>
+            <p><strong>Release date:</strong>{{movie.release_date}}</p>
+            <p><strong>Runtime: </strong>{{movie.runtime}}</p>
+            <p><strong>Vote average: </strong>{{movie.vote_average}}</p>
+        </div>
+    </div>
+
+</div>
+
+<!--<div className = {classes.PosterAndInfo}>
+        <img src = {props.imgUrl} alt = "" className ={classes.Poster}/>
+        <div className = {classes.Info}>
+            {
+                props.type === "movie" ? 
+                <React.Fragment>
+                    <p><strong>Title: </strong>{props.title}</p>
+                    <p><strong>Status: </strong>{props.status}</p>
+                    <p><strong>release date: </strong>{props.release}</p>
+                    <p><strong>Genres: </strong>{props.genres}</p>
+                    <p><strong>Runtime: </strong>{props.runtime}</p>
+                    <p><strong>Vote average: </strong>{props.voteAverage}</p>
+                </React.Fragment>
+                : props.type === "tv" ? 
+                <React.Fragment>
+                    <p><strong>Name: </strong>{props.name}</p>
+                    <p><strong>Genres: </strong>{props.genres}</p>
+                    <p><strong>First air date: </strong>{props.firstAirDate}</p>
+                    <p><strong>In production: </strong>{props.inProduction}</p>
+                    <p><strong>Total Seasons: </strong>{props.totalSeasons}</p>
+                    <p><strong>Total Episodes: </strong>{props.totalEpisodes}</p>
+                    <p><strong>Episode runtime(s): </strong>{props.episodeRuntime}</p>
+                    <p><strong>vote average: </strong>{props.voteAverage}</p>
+                </React.Fragment>
+                : null
+            }
+        </div>
+    </div>-->

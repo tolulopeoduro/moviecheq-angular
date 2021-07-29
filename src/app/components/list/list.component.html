@@ -1,0 +1,17 @@
+<div class="list">
+    <div class="category_buttons">
+        <button 
+        *ngFor="let category of categories" [ngClass]=" currentCategory.name === category.name ? 'disabled' : '' "
+        (click)="onSelectCategory(category.name , category.url)">{{category.name}}</button>
+    </div>
+    <h1>{{currentCategory.name}}</h1>
+    <div class="movies">
+        <app-item *ngFor = "let item of items" [item]="item"></app-item>
+    </div>
+    <div class="pageDial">
+        <button *ngIf="listPage !== 1" (click)="onPrev()" >{{"<"}}</button>
+        <span>{{listPage}}</span>
+        <button *ngIf="maxPages !== listPage" (click)="onNext()">{{">"}}</button>
+    </div>
+</div>
+    

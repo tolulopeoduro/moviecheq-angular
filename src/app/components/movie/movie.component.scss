@@ -1,0 +1,63 @@
+.Details {
+    text-align: left;
+}
+
+.Backdrop {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 30vh;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Gradient {
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) ,rgba(0, 0, 0, 0.6) , black);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.Title {
+    margin-left: 20px;
+    color: white;
+    text-align: left;
+    font-size: 30px;
+}
+
+.MainDetails {
+    margin-left: 20px;
+    overflow-y: auto;
+    height: 60vh;
+}
+
+
+.PosterAndInfo {
+    text-align: left;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.Poster {
+    width: 150px;
+}
+
+.Info {
+    margin-top: 20px;
+}
+
+@media (min-width: 600px){
+    .PosterAndInfo {
+        flex-direction: row;
+    }
+
+    .Info {
+        height: 100%;
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+}

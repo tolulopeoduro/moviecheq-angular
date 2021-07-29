@@ -1,0 +1,12 @@
+<div routerLink = 'movie/{{item.id}}' [ngStyle]="{'background-image' : 'url(https://image.tmdb.org/t/p/w500/'+item.poster_path+')'}" class ="Movie">
+    <div class = "Gradient">
+        <div class = "Details">
+            <span class = "Title">{{item.title}}</span><br/>
+            <hr/>
+            <br/>
+            <span class = "Year">{{item.release_date.split('-')[0]}}</span><br/>
+            <span class = "Other">Rating :{{item.vote_average}}</span>   
+        </div>
+    </div>
+</div>
+
